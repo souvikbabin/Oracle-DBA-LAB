@@ -1,0 +1,11 @@
+| Feature             | **AWR (Automatic Workload Repository)**                   | **ADDM (Automatic Database Diagnostic Monitor)**        | **ASH (Active Session History)**                                    |
+| ------------------- | --------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------- |
+| **Purpose**         | Captures overall database performance statistics          | Analyzes AWR data and provides recommendations          | Captures active session activity for troubleshooting                |
+| **Data Source**     | Database snapshots                                        | AWR snapshots                                           | Active session samples (every second)                               |
+| **Focus**           | Overall database performance                              | Root cause analysis and tuning recommendations          | Session-level activity and wait events                              |
+| **Data Collection** | Snapshot every 1 hour (default)                           | Runs automatically after each AWR snapshot              | Samples active sessions every second                                |
+| **Best Used For**   | Performance comparison between two time periods           | Identifying performance bottlenecks and suggested fixes | Investigating real-time or short-duration performance issues        |
+| **Contains**        | CPU usage, I/O, SQL statistics, wait events, memory usage | Findings, impact analysis, and tuning recommendations   | SQL ID, Session ID, Wait Events, Blocking Session, Machine, User    |
+| **Retention**       | Default 8 days                                            | Based on AWR retention                                  | In-memory (V$ACTIVE_SESSION_HISTORY); historical data stored in AWR |
+| **Report Script**   | `awrrpt.sql`                                              | `addmrpt.sql`                                           | `ashrpt.sql`                                                        |
+| **License**         | Oracle Diagnostic Pack                                    | Oracle Diagnostic Pack                                  | Oracle Diagnostic Pack                                              |
