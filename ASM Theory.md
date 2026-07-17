@@ -244,18 +244,24 @@ List ASM processes:
 ```bash
 ps -ef | grep asm
 ```
+<img width="669" height="324" alt="WhatsApp Image 2026-07-17 at 22 08 36" src="https://github.com/user-attachments/assets/602c27f9-ecd5-4a90-a840-672c7f0a425b" />
+
 
 Check RBAL:
 
 ```bash
 ps -ef | grep rbal
 ```
+<img width="1102" height="51" alt="WhatsApp Image 2026-07-17 at 22 08 54" src="https://github.com/user-attachments/assets/ff808e29-0666-4ce3-a8c7-535037ed2090" />
+
 
 Check ARBx:
 
 ```bash
 ps -ef | grep arb
 ```
+<img width="1067" height="39" alt="WhatsApp Image 2026-07-17 at 22 09 05" src="https://github.com/user-attachments/assets/82c39d2e-c69f-4c91-bb8f-9fa6ce3f6041" />
+
 
 ---
 
