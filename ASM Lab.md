@@ -38,18 +38,19 @@ Start the Oracle High Availability Services (OHAS), which also starts the ASM in
 ```bash
 crsctl start has
 ```
+<img width="975" height="216" alt="image" src="https://github.com/user-attachments/assets/a9997b91-d141-4b87-b44e-a38cb27b6c4b" />
 
 ### Verify ASM Process
 
 ```bash
 ps -ef | grep pmon
 ```
-
 Expected output should include:
 
 ```
 asm_pmon_+ASM
 ```
+<img width="1111" height="49" alt="image" src="https://github.com/user-attachments/assets/f51ee75f-674f-4d87-96a8-589886d77b32" />
 
 ### Verify Grid Processes
 
@@ -62,6 +63,8 @@ Important processes include:
 - ohasd.bin
 - evmd.bin
 - ocssd.bin
+
+<img width="975" height="146" alt="image" src="https://github.com/user-attachments/assets/fc1a6202-3320-4a7f-8b2b-461407351419" />
 
 ---
 
@@ -84,6 +87,7 @@ Expected result:
 ```
 Database is running.
 ```
+<img width="975" height="79" alt="image" src="https://github.com/user-attachments/assets/5c39c80d-2deb-423f-86df-7086e9727273" />
 
 ---
 
@@ -108,6 +112,7 @@ Expected status:
 ```
 STARTED
 ```
+<img width="975" height="104" alt="image" src="https://github.com/user-attachments/assets/2da52409-b0ea-4614-bddb-8ce676568823" />
 
 ---
 
@@ -132,6 +137,7 @@ Expected:
 ```
 READ WRITE
 ```
+<img width="975" height="101" alt="image" src="https://github.com/user-attachments/assets/e59b3302-9a35-4e4f-bd0e-3dfb3f8de69c" />
 
 ---
 
@@ -142,6 +148,7 @@ Display all Oracle Clusterware resources.
 ```bash
 crsctl stat res -t
 ```
+<img width="975" height="419" alt="image" src="https://github.com/user-attachments/assets/bf435a56-79e2-4526-a5b6-c9c5bfd0afa1" />
 
 Verify:
 
@@ -165,9 +172,12 @@ srvctl config database
 
 To display complete configuration:
 
+<img width="975" height="46" alt="image" src="https://github.com/user-attachments/assets/aa313097-28d2-4caf-a5a7-590f5974155e" />
+
 ```bash
 srvctl config database -d prod
 ```
+<img width="975" height="265" alt="image" src="https://github.com/user-attachments/assets/81ada217-e7c9-432d-9af3-049a0f7a909f" />
 
 Typical information displayed:
 
@@ -204,6 +214,8 @@ Verify Grid Infrastructure processes.
 ```bash
 ps -ef | grep d.bin
 ```
+<img width="975" height="146" alt="image" src="https://github.com/user-attachments/assets/b542d1ca-07c2-4783-95dd-c552ef9b317a" />
+
 
 Even after stopping the database, ASM-related processes should continue running.
 
@@ -222,6 +234,7 @@ Shutdown Oracle High Availability Services.
 ```bash
 crsctl stop has
 ```
+<img width="975" height="257" alt="image" src="https://github.com/user-attachments/assets/d35f0c31-2c9b-4720-9a9e-84cb2c69d63e" />
 
 Verify ASM has stopped.
 
@@ -278,6 +291,7 @@ List available disk groups.
 ```sql
 lsdg
 ```
+<img width="975" height="119" alt="image" src="https://github.com/user-attachments/assets/06881b07-29fb-4082-b60e-9d35b775d82d" />
 
 Typical information includes:
 
@@ -299,6 +313,10 @@ CREATE TABLESPACE RAM
 DATAFILE '+DATA'
 SIZE 30M;
 ```
+<img width="975" height="53" alt="image" src="https://github.com/user-attachments/assets/ea4b6955-6434-4f61-83ef-41a188c31ca3" />
+
+<img width="975" height="163" alt="image" src="https://github.com/user-attachments/assets/8f414d67-ed0b-4e7d-adfb-f5c3dd092b13" />
+
 
 **Important**
 
@@ -311,6 +329,10 @@ Example:
 ```
 
 If the plus sign is omitted, Oracle creates the file in the default filesystem location (typically the `dbs` directory).
+<img width="975" height="57" alt="image" src="https://github.com/user-attachments/assets/b271d976-0146-4ce0-8025-e3bd8f5a87a3" />
+
+<img width="975" height="164" alt="image" src="https://github.com/user-attachments/assets/9a1cf0e3-878d-423a-bbff-0b68b1cf9389" />
+
 
 ---
 
@@ -365,6 +387,10 @@ ALTER DATABASE MOVE DATAFILE
 '/u01/app/oracle/product/19.3.0/dbhome_1/dbs/DATA'
 TO '+DATA';
 ```
+<img width="975" height="51" alt="image" src="https://github.com/user-attachments/assets/a7171cdc-a1c0-48d3-9074-55a7edc974dd" />
+
+<img width="975" height="164" alt="image" src="https://github.com/user-attachments/assets/2be4f126-a3b6-400d-95a9-e98786f735ce" />
+
 
 Oracle copies the file into ASM and updates the control file automatically.
 
